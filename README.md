@@ -12,8 +12,6 @@ https://github.com/thehien93/codex-andrej-karpathy-skills
 
 This project is adapted from [`forrestchang/andrej-karpathy-skills`](https://github.com/forrestchang/andrej-karpathy-skills), which packages guidelines derived from [Andrej Karpathy's observations](https://x.com/karpathy/status/2015883857489522876). The original project is MIT licensed.
 
-English | [简体中文](./README.zh.md)
-
 ## The Problems
 
 From Andrej's post:
@@ -104,8 +102,6 @@ Strong success criteria let the LLM loop independently. Weak criteria ("make it 
 
 ## Install
 
-**Option A: Codex local plugin**
-
 This repo is structured as a Codex plugin:
 
 ```text
@@ -113,7 +109,7 @@ This repo is structured as a Codex plugin:
 skills/karpathy-guidelines/SKILL.md
 ```
 
-For this machine, it is registered in the home-local Codex marketplace as:
+For a home-local install, register it in `~/.agents/plugins/marketplace.json`:
 
 ```json
 {
@@ -125,7 +121,7 @@ For this machine, it is registered in the home-local Codex marketplace as:
 }
 ```
 
-**Option B: Direct Codex skill**
+## Direct Skill Install
 
 You can also install only the skill directory:
 
@@ -135,23 +131,6 @@ cp skills/karpathy-guidelines/SKILL.md ~/.codex/skills/karpathy-guidelines/SKILL
 ```
 
 This makes `karpathy-guidelines` available as a normal Codex skill.
-
-**Option C: AGENTS.md (per-project)**
-
-New project:
-```bash
-curl -o AGENTS.md https://raw.githubusercontent.com/thehien93/codex-andrej-karpathy-skills/main/CLAUDE.md
-```
-
-Existing project (append):
-```bash
-echo "" >> AGENTS.md
-curl https://raw.githubusercontent.com/thehien93/codex-andrej-karpathy-skills/main/CLAUDE.md >> AGENTS.md
-```
-
-## Using with Cursor
-
-This repository includes a committed Cursor project rule ([`.cursor/rules/karpathy-guidelines.mdc`](.cursor/rules/karpathy-guidelines.mdc)) so the same guidelines apply when you open the project in Cursor. See **[CURSOR.md](CURSOR.md)** for setup, using the rule in other projects, and how this relates to Claude Code.
 
 ## Key Insight
 
@@ -172,7 +151,7 @@ These guidelines are working if you see:
 
 ## Customization
 
-These guidelines are designed to be merged with project-specific instructions. Add them to your existing `AGENTS.md` or create a new one.
+These guidelines are designed to be merged with project-specific instructions. If a project needs local variations, copy or adapt `skills/karpathy-guidelines/SKILL.md`.
 
 For project-specific rules, add sections like:
 
