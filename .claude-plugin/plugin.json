@@ -1,11 +1,13 @@
 {
-  "name": "andrej-karpathy-skills",
-  "description": "Behavioral guidelines to reduce common LLM coding mistakes, derived from Andrej Karpathy's observations on LLM coding pitfalls",
+  "name": "codex-andrej-karpathy-skills",
+  "description": "Codex plugin with behavioral guidelines to reduce common LLM coding mistakes, derived from Andrej Karpathy's observations on LLM coding pitfalls",
   "version": "1.0.0",
   "author": {
-    "name": "forrestchang"
+    "name": "thehien93"
   },
+  "homepage": "https://github.com/thehien93/codex-andrej-karpathy-skills",
+  "repository": "https://github.com/thehien93/codex-andrej-karpathy-skills",
   "license": "MIT",
-  "keywords": ["guidelines", "best-practices", "coding", "karpathy"],
+  "keywords": ["codex", "guidelines", "best-practices", "coding", "karpathy"],
   "skills": ["./skills/karpathy-guidelines"]
 }

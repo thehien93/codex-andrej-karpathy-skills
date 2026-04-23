@@ -1,23 +1,24 @@
 {
-  "name": "karpathy-skills",
-  "id": "karpathy-skills",
+  "name": "codex-karpathy-skills",
+  "id": "codex-karpathy-skills",
   "owner": {
-    "name": "forrestchang"
+    "name": "thehien93"
   },
   "metadata": {
-    "description": "Behavioral guidelines to reduce common LLM coding mistakes, derived from Andrej Karpathy's observations",
+    "description": "Codex-focused behavioral guidelines to reduce common LLM coding mistakes, derived from Andrej Karpathy's observations",
     "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "andrej-karpathy-skills",
+      "name": "codex-andrej-karpathy-skills",
       "source": "./",
-      "description": "Behavioral guidelines to reduce common LLM coding mistakes: Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution",
+      "description": "Codex-focused behavioral guidelines to reduce common LLM coding mistakes: Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution",
       "version": "1.0.0",
       "author": {
-        "name": "forrestchang"
+        "name": "thehien93"
       },
       "keywords": [
+        "codex",
         "guidelines",
         "best-practices",
         "coding",

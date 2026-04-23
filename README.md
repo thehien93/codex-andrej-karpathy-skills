@@ -1,10 +1,16 @@
-# Karpathy-Inspired Claude Code Guidelines
+# Codex Andrej Karpathy Skills
 
-> Check out my new project [Multica](https://github.com/multica-ai/multica) — an open-source platform for running and managing coding agents with reusable skills.
->
-> Follow me on X: [https://x.com/jiayuan_jy](https://x.com/jiayuan_jy)
+Codex plugin with behavioral guidelines to reduce common LLM coding mistakes, adapted from Andrej Karpathy's observations on LLM coding pitfalls.
 
-A single `CLAUDE.md` file to improve Claude Code behavior, derived from [Andrej Karpathy's observations](https://x.com/karpathy/status/2015883857489522876) on LLM coding pitfalls.
+This repo is a Codex-focused personal adaptation published at:
+
+```text
+https://github.com/thehien93/codex-andrej-karpathy-skills
+```
+
+## Attribution
+
+This project is adapted from [`forrestchang/andrej-karpathy-skills`](https://github.com/forrestchang/andrej-karpathy-skills), which packages guidelines derived from [Andrej Karpathy's observations](https://x.com/karpathy/status/2015883857489522876). The original project is MIT licensed.
 
 English | [简体中文](./README.zh.md)
 
@@ -98,31 +104,49 @@ Strong success criteria let the LLM loop independently. Weak criteria ("make it 
 
 ## Install
 
-**Option A: Claude Code Plugin (recommended)**
+**Option A: Codex local plugin**
 
-From within Claude Code, first add the marketplace:
-```
-/plugin marketplace add forrestchang/andrej-karpathy-skills
-```
+This repo is structured as a Codex plugin:
 
-Then install the plugin:
-```
-/plugin install andrej-karpathy-skills@karpathy-skills
+```text
+.codex-plugin/plugin.json
+skills/karpathy-guidelines/SKILL.md
 ```
 
-This installs the guidelines as a Claude Code plugin, making the skill available across all your projects.
+For this machine, it is registered in the home-local Codex marketplace as:
 
-**Option B: CLAUDE.md (per-project)**
+```json
+{
+  "name": "codex-andrej-karpathy-skills",
+  "source": {
+    "source": "local",
+    "path": "./plugins/codex-andrej-karpathy-skills"
+  }
+}
+```
+
+**Option B: Direct Codex skill**
+
+You can also install only the skill directory:
+
+```bash
+mkdir -p ~/.codex/skills/karpathy-guidelines
+cp skills/karpathy-guidelines/SKILL.md ~/.codex/skills/karpathy-guidelines/SKILL.md
+```
+
+This makes `karpathy-guidelines` available as a normal Codex skill.
+
+**Option C: AGENTS.md (per-project)**
 
 New project:
 ```bash
-curl -o CLAUDE.md https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
+curl -o AGENTS.md https://raw.githubusercontent.com/thehien93/codex-andrej-karpathy-skills/main/CLAUDE.md
 ```
 
 Existing project (append):
 ```bash
-echo "" >> CLAUDE.md
-curl https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md >> CLAUDE.md
+echo "" >> AGENTS.md
+curl https://raw.githubusercontent.com/thehien93/codex-andrej-karpathy-skills/main/CLAUDE.md >> AGENTS.md
 ```
 
 ## Using with Cursor
@@ -148,7 +172,7 @@ These guidelines are working if you see:
 
 ## Customization
 
-These guidelines are designed to be merged with project-specific instructions. Add them to your existing `CLAUDE.md` or create a new one.
+These guidelines are designed to be merged with project-specific instructions. Add them to your existing `AGENTS.md` or create a new one.
 
 For project-specific rules, add sections like:
 
