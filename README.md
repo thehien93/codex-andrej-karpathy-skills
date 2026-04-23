@@ -12,6 +12,8 @@ https://github.com/thehien93/codex-andrej-karpathy-skills
 
 This project is adapted from [`forrestchang/andrej-karpathy-skills`](https://github.com/forrestchang/andrej-karpathy-skills), which packages guidelines derived from [Andrej Karpathy's observations](https://x.com/karpathy/status/2015883857489522876). The original project is MIT licensed.
 
+The Codex plugin packaging and repo cleanup are maintained by `thehien93`.
+
 ## The Problems
 
 From Andrej's post:
@@ -171,4 +173,4 @@ The goal is reducing costly mistakes on non-trivial work, not slowing down simpl
 
 ## License
 
-MIT
+MIT. See [`LICENSE`](./LICENSE).
